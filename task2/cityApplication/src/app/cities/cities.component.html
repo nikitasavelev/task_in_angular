@@ -1,0 +1,11 @@
+<h2>Now we have list of {{ cities.length }} cities!</h2>
+<div class="container">
+  <ul class="cities">
+    <li *ngFor="let city of cities">
+      <a routerLink="/cities/{{ city.id }}">
+        <img src="{{ city.logo }}" /> {{ city.name }}
+        {{ city.postalCode }}
+      </a>
+    </li>
+  </ul>
+</div>

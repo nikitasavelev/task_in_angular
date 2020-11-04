@@ -1,0 +1,13 @@
+<div class="container">
+  <div *ngIf="city" class="city">
+    <h3>"{{ city.name }}"</h3>
+    <img src="{{ city.logo }}" alt="notFound" />
+    <label>Postal Code: </label>{{ city.postalCode }}
+    <label>Name: </label>
+    <input [(ngModel)]="city.name" placeholder="name" minlength="1" />
+    <div class="buttonContainer">
+      <button (click)="save()">Save</button>
+      <button (click)="back()">Back</button>
+    </div>
+  </div>
+</div>
