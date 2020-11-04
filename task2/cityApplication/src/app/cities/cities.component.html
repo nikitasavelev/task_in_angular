@@ -3,8 +3,11 @@
   <ul class="cities">
     <li *ngFor="let city of cities">
       <a routerLink="/cities/{{ city.id }}">
-        <img src="{{ city.logo }}" /> {{ city.name }}
-        {{ city.postalCode }}
+        <img src="{{ city.logo }}" />
+        <div class="infoContainer">
+          {{ city.name }}
+          {{ city.postalCode }}
+        </div>
       </a>
     </li>
   </ul>
